@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:paddingTop="16dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/txtTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="monospace"
+        android:padding="16dp"
+        android:text="new task"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTransparent"
+        android:padding="16dp"
+        android:src="@drawable/ic_delete"
+        android:tint="@color/colorIconDark"
+        app:layout_constraintBottom_toBottomOf="@id/txtTask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtTask" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/title"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/colorAccent"
+        android:foregroundTint="@color/colorAccent"
+        android:textColorHint="@color/colorTextColorDark"
+        android:theme="@style/TextInputTheme"
+        app:boxBackgroundColor="@color/colorPrimary"
+        app:boxStrokeColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/description">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:textColorHighlight="@color/colorAccentHighlight"
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:hint="title"
+            android:textColor="@color/colorWhite" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/description"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:textColorHint="@color/colorTextColorDark"
+        android:theme="@style/TextInputTheme"
+        app:boxBackgroundColor="@color/colorPrimary"
+        app:boxStrokeColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/btnSave">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:textColorHighlight="@color/colorAccentHighlight"
+            android:id="@+id/txtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:hint="description"
+            android:textColor="@color/colorWhite" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:layout_marginStart="16dp"
+        android:id="@+id/checkbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/colorAccent"
+        android:fontFamily="monospace"
+        android:includeFontPadding="true"
+        android:paddingStart="16dp"
+        android:text="done"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/btnSave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnSave" />
+
+    <com.google.android.material.button.MaterialButton
+        app:rippleColor="@color/colorAccentHighlight"
+        android:id="@+id/btnSave"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="save"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        app:cornerRadius="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
