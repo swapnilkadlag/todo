@@ -1,4 +1,4 @@
-package com.swapnilkadlag.todo.ui;
+package com.swapnilkadlag.todo.ui.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.swapnilkadlag.todo.R;
 import com.swapnilkadlag.todo.data.Task;
+import com.swapnilkadlag.todo.ui.MainViewModel;
 
 public class TaskAdapter extends ListAdapter<Task, TaskAdapter.TaskViewHolder> {
     private OnItemClickListener listener;

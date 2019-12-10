@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.swapnilkadlag.todo.R;
 import com.swapnilkadlag.todo.data.Task;
+import com.swapnilkadlag.todo.ui.adapters.TaskAdapter;
 
 import java.util.List;
 
