@@ -10,11 +10,19 @@ import java.util.List;
 public class TaskRepository {
     private TaskDao taskDao;
     private LiveData<List<Task>> allTasks;
+    private static TaskRepository instance;
 
-    public TaskRepository(Application application) {
+    private TaskRepository(Application application) {
         TaskDatabase database = TaskDatabase.getInstance(application);
         taskDao = database.taskDao();
         allTasks = taskDao.getAll();
+    }
+
+    public static TaskRepository getInstance(Application application) {
+        if(instance == null){
+            instance = new TaskRepository(application);
+        }
+        return instance;
     }
 
     public void insert(Task task) {

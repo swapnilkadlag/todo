@@ -18,7 +18,7 @@ public class MainViewModel extends AndroidViewModel {
 
     public MainViewModel(@NonNull Application application) {
         super(application);
-        repository = new TaskRepository(application);
+        repository = TaskRepository.getInstance(application);
         allTasks = repository.getAllTasks();
     }
 
